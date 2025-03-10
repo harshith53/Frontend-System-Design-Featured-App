@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-background: #ffffff;
+  --card-border: #e5e7eb;
+  --muted-background: #f3f4f6;
+  --primary-background: #1677ff;
+  --primary-foreground: #ffffff;
 }
 
 @theme inline {
@@ -16,11 +21,82 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --card-background: #1a1a1a;
+    --card-border: #2a2a2a;
+    --muted-background: #171717;
+    --primary-background: #1677ff;
+    --primary-foreground: #ffffff;
   }
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-background: #1a1a1a;
+  --card-border: #2a2a2a;
+  --muted-background: #171717;
+  --primary-background: #1677ff;
+  --primary-foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Additional styles to ensure visibility in both modes */
+.card {
+  background-color: var(--card-background);
+  border-color: var(--card-border);
+}
+
+.bg-muted {
+  background-color: var(--muted-background);
+}
+
+.text-muted {
+  color: var(--foreground);
+  opacity: 0.7;
+}
+
+/* Make sure links are visible in both modes */
+a {
+  color: var(--primary-background);
+}
+
+/* Button styling to ensure visibility */
+button, .btn {
+  background-color: var(--primary-background);
+  color: var(--primary-foreground);
+}
+
+/* Force dark mode properties for elements that should be dark in dark mode */
+.dark .dark\:bg-gray-800 {
+  background-color: #1a1a1a !important;
+}
+
+.dark .dark\:bg-gray-900 {
+  background-color: #111111 !important;
+}
+
+.dark .dark\:text-white {
+  color: #ffffff !important;
+}
+
+.dark .dark\:border-gray-700 {
+  border-color: #2a2a2a !important;
+}
+
+/* Force light mode properties for elements that should be light in light mode */
+.light .light\:bg-white {
+  background-color: #ffffff !important;
+}
+
+.light .light\:text-gray-900 {
+  color: #171717 !important;
+}
+
+.light .light\:border-gray-200 {
+  border-color: #e5e7eb !important;
 }
