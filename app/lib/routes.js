@@ -7,6 +7,12 @@ export const routes = [
     description: 'Frontend System Design Learning Platform'
   },
   {
+    name: 'Features',
+    path: '/features',
+    icon: 'info',
+    description: 'Features of the Frontend System Design '
+  },
+  {
     name: 'Concepts',
     path: '/concepts',
     icon: 'bulb',

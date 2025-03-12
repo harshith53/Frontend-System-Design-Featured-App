@@ -61,36 +61,51 @@ export default function CaseStudiesPage() {
 
   return (
     <ClientLayout>
-      <div className="py-10 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Title>Frontend System Design Case Studies</Title>
-            <Paragraph className="text-lg max-w-3xl mx-auto">
+      <div className="py-8 sm:py-10 md:py-12 px-4 relative overflow-hidden">
+        {/* Background patterns */}
+        <div className="absolute inset-0 opacity-5 z-0">
+          <div className="wave-pattern absolute inset-0"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-block mb-2">
+              <span className="px-3 py-1 bg-primary-background/10 text-primary-background rounded-full text-sm font-medium">Industry Examples</span>
+            </div>
+            <Title className="text-2xl sm:text-3xl md:text-4xl mb-4">
+              Frontend System Design Case Studies
+            </Title>
+            <Paragraph className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto text-muted">
               Dive into real-world frontend architecture case studies from leading tech companies.
               Learn how they tackle complex challenges and scale their applications.
             </Paragraph>
           </div>
 
-          <Row gutter={[24, 32]}>
+          <Row gutter={[24, 32]} className="px-2 md:px-0">
             {caseStudies.map((study, index) => (
-              <Col xs={24} md={12} key={index}>
-                <Link href={`/case-studies/${study.slug}`}>
+              <Col xs={24} sm={12} key={index} className="mb-6 sm:mb-0">
+                <Link href={`/case-studies/${study.slug}`} className="block h-full">
                   <Card 
                     hoverable 
-                    className="h-full card"
-                    cover={
-                      <div className="p-4 bg-muted h-48 flex items-center justify-center">
-                        <div className="text-4xl font-bold text-center">{study.company}</div>
-                      </div>
-                    }
+                    className="h-full feature-card border-0 rounded-lg overflow-hidden"
+                    bodyStyle={{ padding: '0' }}
+                    bordered={false}
                   >
-                    <Title level={4}>{study.title}</Title>
-                    <Paragraph>{study.description}</Paragraph>
-                    <Divider />
-                    <div className="flex flex-wrap gap-2">
-                      {study.topics.map((topic, i) => (
-                        <Tag key={i} color="blue">{topic}</Tag>
-                      ))}
+                    <div className="bg-gradient p-6 sm:p-8 h-40 sm:h-44 flex items-center justify-center relative">
+                      <div className="absolute inset-0 opacity-20">
+                        <div className="dot-pattern absolute inset-0"></div>
+                      </div>
+                      <div className="text-3xl sm:text-4xl font-bold text-white relative z-10">{study.company}</div>
+                    </div>
+                    <div className="p-6">
+                      <Title level={4} className="text-base sm:text-lg mb-3">{study.title}</Title>
+                      <Paragraph className="text-sm text-muted mb-4">{study.description}</Paragraph>
+                      <Divider className="my-4" />
+                      <div className="flex flex-wrap gap-2">
+                        {study.topics.map((topic, i) => (
+                          <Tag key={i} className="text-xs px-2 py-1 rounded-full custom-tag">{topic}</Tag>
+                        ))}
+                      </div>
                     </div>
                   </Card>
                 </Link>
@@ -98,16 +113,27 @@ export default function CaseStudiesPage() {
             ))}
           </Row>
 
-          <div className="mt-16 p-8 bg-muted rounded-lg text-center">
-            <Title level={3}>Want to see a specific case study?</Title>
-            <Paragraph className="text-lg mb-6">
-              We&apos;re constantly adding new case studies. Let us know which company&apos;s frontend architecture you&apos;d like to learn about next.
-            </Paragraph>
-            <Link href="/forum">
-              <Button type="primary" size="large">
-                Request a Case Study
-              </Button>
-            </Link>
+          <div className="mt-16 md:mt-20 text-center p-8 bg-gradient rounded-lg relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+              <div className="dot-pattern absolute inset-0"></div>
+            </div>
+            <div className="relative z-10">
+              <Title level={3} className="text-xl sm:text-2xl md:text-3xl mb-4 text-white">
+                Want to see a specific case study?
+              </Title>
+              <Paragraph className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-6 md:mb-8 text-white/90">
+                We&apos;re constantly adding new case studies. Let us know which company&apos;s frontend architecture you&apos;d like to learn about next.
+              </Paragraph>
+              <Link href="/forum">
+                <Button 
+                  type="primary" 
+                  size="large" 
+                  className="bg-white text-primary-background hover:bg-white/90 border-none px-6 py-3 h-auto rounded-full shadow-lg hover:shadow-xl"
+                >
+                  Request a Case Study
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
