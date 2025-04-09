@@ -25,6 +25,26 @@ export default function FeaturesPage() {
       description: "A pop-up modal for additional content or forms.",
       link: "/features/modal",
     },
+    {
+      id: 4,
+      title: "Splitter",
+      description: "Interactive resizable panels for side-by-side content viewing.",
+      link: "/features/splitter",
+    },
+    {
+      id: 5,
+      title: "Data Explorer OF DB",
+    description:"A data explorer for database tables, with a carousel view and table view.",
+      link: "/features/carousel",
+    },
+    {
+      id:6,
+      title:"ToggleSidebar Collapse Section",
+      description:"ToggleSidebar Collapse Section for ease Transition in UI",
+      link:"/features/collapse",
+
+
+    }
   ];
 
   return (
@@ -37,15 +57,23 @@ export default function FeaturesPage() {
               interactive and user-friendly web applications.
             </Paragraph>
           </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuresData.map((feature) => (
-            <div key={feature.id} className="bg-gray-800 rounded-lg p-6 shadow-lg">
-              <h2 className="text-xl font-semibold text-white">{feature.title}</h2>
-              <p className="text-gray-300 mt-2">{feature.description}</p>
-              <Link href={feature.link} className="inline-block mt-4 text-blue-400">
-                Explore →
-              </Link>
-            </div>
+          <div
+          key={feature.id}
+          className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-colors"
+        >
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+            {feature.title}
+          </h2>
+          <p className="text-gray-700 dark:text-white mt-2">{feature.description}</p>
+          <Link
+            href={feature.link}
+            className="inline-block mt-4 text-blue-600 dark:text-blue-400"
+          >
+            Explore →
+          </Link>
+        </div>
           ))}
         </div>
       </div>

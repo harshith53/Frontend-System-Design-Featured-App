@@ -30,6 +30,12 @@ export const routes = [
     icon: 'code',
     description: 'Practice with Frontend System Design Challenges'
   },
+  {
+    name: 'Blog',
+    path: '/blogs',
+    icon: 'book',
+    description: 'Latest articles and insights on frontend development'
+  },
   // {
   //   name: 'Interviews',
   //   path: '/interviews',
