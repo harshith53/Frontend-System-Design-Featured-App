@@ -13,18 +13,18 @@ export default function FeaturesPage() {
       description: "An intelligent input field with real-time suggestions.",
       link: "/features/autocomplete",
     },
-    {
-      id: 2,
-      title: "Dropdown Menu",
-      description: "A customizable dropdown for easy navigation.",
-      link: "/features/dropdown",
-    },
-    {
-      id: 3,
-      title: "Modal",
-      description: "A pop-up modal for additional content or forms.",
-      link: "/features/modal",
-    },
+    // {
+    //   id: 2,
+    //   title: "Dropdown Menu",
+    //   description: "A customizable dropdown for easy navigation.",
+    //   link: "/features/dropdown",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Modal",
+    //   description: "A pop-up modal for additional content or forms.",
+    //   link: "/features/modal",
+    // },
     {
       id: 4,
       title: "Splitter",
@@ -43,6 +43,13 @@ export default function FeaturesPage() {
       description:"ToggleSidebar Collapse Section for ease Transition in UI",
       link:"/features/collapse",
 
+
+    },
+    {
+      id:7,
+      title:"Data visualization using charts ",
+      description:"Data visualization of Large and Noise Dataset using charts ",
+      link:"/features/charts",
 
     }
   ];
