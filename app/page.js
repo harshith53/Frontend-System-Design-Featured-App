@@ -89,7 +89,7 @@ export default function Home() {
               <div className="hidden md:block">
                 <div className="relative w-full h-78 lg:h-80">
                   <div className="absolute inset-0 bg-opacity-10 rounded-lg p-6 lg:p-8 transform rotate-3  ">
-                        <Image src="/frontendLogo.png"  width={500} height={500} />
+                        <Image src="/frontendLogo.png" alt="Frontend System Design" width={500} height={500} />
                   </div>
                 </div>
               </div>

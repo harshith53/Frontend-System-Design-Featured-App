@@ -50,18 +50,18 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="font-semibold mb-4 text-base">Resources</h4>
             <ul className="space-y-2">
-              <li><Link href="/interviews" className="text-sm text-muted hover:text-primary-background transition-colors">Mock Interviews</Link></li>
-              <li><Link href="/resources" className="text-sm text-muted hover:text-primary-background transition-colors">Learning Resources</Link></li>
-              <li><Link href="/forum" className="text-sm text-muted hover:text-primary-background transition-colors">Community Forum</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">Mock Interviews</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">Learning Resources</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">Community Forum</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1">
             <h4 className="font-semibold mb-4 text-base">Company</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-sm text-muted hover:text-primary-background transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted hover:text-primary-background transition-colors">Contact</Link></li>
-              <li><Link href="/terms" className="text-sm text-muted hover:text-primary-background transition-colors">Terms of Service</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">About Us</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-sm text-muted hover:text-primary-background transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

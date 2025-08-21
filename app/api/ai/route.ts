@@ -14,11 +14,11 @@ class MCPServer {
   private messageId = 0;
 
   constructor() {
-    // Path to the MCP server executable
+    if (!process.env.ENABLE_MCP) {
+      throw new Error('MCP disabled');
+    }
     const mcpServerPath = path.join(process.cwd(), 'mcp-server', 'dist', 'index.js');
-    this.process = spawn('node', [mcpServerPath], {
-      stdio: ['pipe', 'pipe', 'pipe']
-    });
+    this.process = spawn('node', [mcpServerPath], { stdio: ['pipe', 'pipe', 'pipe'] });
   }
 
   async callTool(toolName: string, args: any) {
@@ -113,7 +113,7 @@ export async function POST(req: Request) {
       prompt.toLowerCase().includes(keyword.toLowerCase())
     );
 
-    if (hasProjectContext) {
+    if (hasProjectContext && process.env.ENABLE_MCP) {
       try {
         const mcpServer = new MCPServer();
         
