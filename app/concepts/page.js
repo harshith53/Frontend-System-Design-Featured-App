@@ -108,8 +108,11 @@ export default function ConceptsPage() {
               <Col xs={24} sm={12} xl={8} key={index} className="mb-6 sm:mb-0">
                 <Card 
                   className="h-full feature-card border-0 rounded-lg"
-                  bodyStyle={{ padding: '24px' }}
-                  bordered={false}
+                  styles={{ 
+                    body: { padding: '24px' },
+                    header: { border: 'none' },
+                    body: { padding: '24px', border: 'none' }
+                  }}
                 >
                   <div className="feature-icon-wrapper mb-5">
                     <span className="text-2xl">{concept.icon}</span>

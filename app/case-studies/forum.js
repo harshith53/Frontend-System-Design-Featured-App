@@ -4,7 +4,7 @@ import ClientLayout from '../layouts/ClientLayout';
 
 
 
-export default function DashboardPage() {
+export default function Forum() {
 
   return (
     <ClientLayout>

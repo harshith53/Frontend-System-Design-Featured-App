@@ -82,7 +82,7 @@ export default function Navbar() {
               <Button type="primary" className="px-4 py-1 h-auto rounded-full shadow-md hover:shadow-lg">
                 <div className="flex items-center">
                   <span>Dashboard</span>
-                  <Badge count={3} size="small" className="ml-1" />
+                  <Badge  size="small" className="ml-1" />
                 </div>
               </Button>
             </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
       <Drawer
         title={
           <span className="text-foreground flex items-center">
-            <span className="bg-primary-background text-primary-foreground w-7 h-7 rounded-md flex items-center justify-center mr-2">F</span>
+            <img src="/logo.png" alt="Logo" className="w-6 h-6 mr-2" />
             <span>FrontendSD</span>
           </span>
         }
@@ -112,8 +112,10 @@ export default function Navbar() {
         onClose={onClose}
         open={open}
         width="280px"
-        bodyStyle={{ padding: '16px 0' }}
-        headerStyle={{ borderBottom: '1px solid var(--card-border)' }}
+        styles={{
+          body: { padding: '16px 0' },
+          header: { borderBottom: '1px solid var(--card-border)' }
+        }}
       >
         <div className="flex flex-col h-full px-4">
           <Menu
@@ -134,7 +136,7 @@ export default function Navbar() {
               <Button type="primary" block className="rounded-full h-auto py-2">
                 <div className="flex items-center justify-center">
                   <span>Dashboard</span>
-                  <Badge count={3} size="small" className="ml-1" />
+                  <Badge  size="small" className="ml-1" />
                 </div>
               </Button>
             </Link>

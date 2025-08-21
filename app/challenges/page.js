@@ -123,8 +123,11 @@ export default function ChallengesPage() {
                   <Card 
                     hoverable
                     className="h-full feature-card"
-                    bordered={false}
-                    bodyStyle={{ padding: '24px' }}
+                    styles={{ 
+                      body: { padding: '24px' },
+                      header: { border: 'none' },
+                      body: { padding: '24px', border: 'none' }
+                    }}
                   >
                     <Badge color={getDifficultyColor(challenge.difficulty)} text={challenge.difficulty} className="mb-4 text-xs sm:text-sm" />
                     <Title level={4} className="m-0 text-base sm:text-lg mb-3">{challenge.title}</Title>
@@ -155,7 +158,7 @@ export default function ChallengesPage() {
                 Start with a beginner challenge and work your way up to expert level. 
                 Each completed challenge will help you build your frontend system design portfolio.
               </Paragraph>
-              <Link href="/challenges/ecommerce-product-page">
+            {/* linking need to be worked in future */}
                 <Button 
                   type="primary" 
                   size="large" 
@@ -163,7 +166,7 @@ export default function ChallengesPage() {
                 >
                   Start First Challenge
                 </Button>
-              </Link>
+           
             </div>
           </div>
         </div>

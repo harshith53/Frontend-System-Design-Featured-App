@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="mb-6">
               <Link href="/" className="font-bold text-xl mb-4 inline-block">
                 <span className="text-foreground flex items-center">
-                  <span className="bg-primary-background text-primary-foreground w-7 h-7 rounded-md flex items-center justify-center mr-2">F</span>
+                <img src="/logo.png" alt="Coming Soon" className="w-7 h-7 rounded-md mr-2" />
                   <span>FrontendSD</span>
                 </span>
               </Link>
@@ -43,6 +43,7 @@ export default function Footer() {
               <li><Link href="/concepts" className="text-sm text-muted hover:text-primary-background transition-colors">Concepts</Link></li>
               <li><Link href="/case-studies" className="text-sm text-muted hover:text-primary-background transition-colors">Case Studies</Link></li>
               <li><Link href="/challenges" className="text-sm text-muted hover:text-primary-background transition-colors">Challenges</Link></li>
+              <li><Link href="/ai" className="text-sm text-muted hover:text-primary-background transition-colors">AI Assistant</Link></li>
             </ul>
           </div>
 

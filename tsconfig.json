@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/ai/page.js", "app/index.mjs", "app/features/testgraph/page.js"  ],
   "exclude": [
     "node_modules"
   ]

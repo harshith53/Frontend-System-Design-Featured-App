@@ -57,7 +57,11 @@ const AutocompleteComponent = () => {
         {showSuggestions && (
           <Card 
             className="absolute w-full mt-1 z-10 p-0 max-h-64 overflow-auto"
-            bodyStyle={{ padding: '0' }}
+            styles={{ 
+              body: { padding: '0' },
+              header: { border: 'none' },
+              body: { padding: '0', border: 'none' }
+            }}
           >
             {filtered.length > 0 ? (
               <ul className="divide-y">

@@ -33,6 +33,12 @@ export default function Home() {
       icon: '🧩',
       link: '/challenges'
     },
+    {
+      title: 'AI Assistant',
+      description: 'Get instant answers to your questions with our AI assistant.',
+      icon: '🤖',
+      link: '/ai'
+    },
     // {
     //   title: 'Mock Interviews',
     //   description: 'Prepare for frontend system design interviews with simulated interview scenarios.',
@@ -81,14 +87,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden md:block">
-                <div className="relative w-full h-64 lg:h-80">
-                  <div className="absolute inset-0 bg-white bg-opacity-10 rounded-lg p-6 lg:p-8 transform rotate-3 backdrop-blur-sm border border-white/20 shadow-2xl">
-                    <div className="w-full h-full border-2 border-white border-dashed rounded flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-5xl lg:text-6xl mb-4">🏗️</div>
-                        <p className="text-lg lg:text-xl text-white">Frontend Architecture</p>
-                      </div>
-                    </div>
+                <div className="relative w-full h-78 lg:h-80">
+                  <div className="absolute inset-0 bg-opacity-10 rounded-lg p-6 lg:p-8 transform rotate-3  ">
+                        <Image src="/frontendLogo.png"  width={500} height={500} />
                   </div>
                 </div>
               </div>
@@ -117,8 +118,11 @@ export default function Home() {
                   <Link href={feature.link} className="block h-full">
                     <Card 
                       className="h-full feature-card border-0 rounded-lg"
-                      bodyStyle={{ padding: '24px' }}
-                      bordered={false}
+                      styles={{ 
+                        body: { padding: '24px' },
+                        header: { border: 'none' },
+                        body: { padding: '24px', border: 'none' }
+                      }}
                     >
                       <div className="feature-icon-wrapper mb-5">
                         <span className="text-2xl">{feature.icon}</span>

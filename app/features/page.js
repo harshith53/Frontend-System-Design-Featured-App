@@ -51,7 +51,14 @@ export default function FeaturesPage() {
       description:"Data visualization of Large and Noise Dataset using charts ",
       link:"/features/charts",
 
+
+    },{
+      id:8,
+      title:"Graph Visualization",
+      description:"Graph Visualization of Large and Noise Dataset using charts ",
+      link:"/features/testgraph",
     }
+
   ];
 
   return (

@@ -36,6 +36,12 @@ export const routes = [
     icon: 'book',
     description: 'Latest articles and insights on frontend development'
   },
+  {
+    name: 'AI Assistant',
+    path: '/ai',
+    icon: 'robot',
+    description: 'Get instant answers to your questions with our AI assistant.'
+  },
   // {
   //   name: 'Interviews',
   //   path: '/interviews',

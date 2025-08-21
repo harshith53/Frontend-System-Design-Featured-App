@@ -1,0 +1,27 @@
+{
+  "name": "featuredapp-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for FeaturedApp - Frontend System Design Learning Platform",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "zod": "^3.25.76",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/fs-extra": "^11.0.4",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "keywords": ["mcp", "frontend", "system-design", "learning-platform"],
+  "author": "Your Name",
+  "license": "MIT"
+}

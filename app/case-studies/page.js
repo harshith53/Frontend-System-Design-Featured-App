@@ -84,12 +84,15 @@ export default function CaseStudiesPage() {
           <Row gutter={[24, 32]} className="px-2 md:px-0">
             {caseStudies.map((study, index) => (
               <Col xs={24} sm={12} key={index} className="mb-6 sm:mb-0">
-                <Link href={`/case-studies/${study.slug}`} className="block h-full">
+                {/* <Link href={`/case-studies/${study.slug}`} className="block h-full"> */}
                   <Card 
                     hoverable 
                     className="h-full feature-card border-0 rounded-lg overflow-hidden"
-                    bodyStyle={{ padding: '0' }}
-                    bordered={false}
+                    styles={{ 
+                      body: { padding: '0' },
+                      header: { border: 'none' },
+                      body: { padding: '0', border: 'none' }
+                    }}
                   >
                     <div className="bg-gradient p-6 sm:p-8 h-40 sm:h-44 flex items-center justify-center relative">
                       <div className="absolute inset-0 opacity-20">
@@ -108,7 +111,7 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
                   </Card>
-                </Link>
+                {/* </Link> */}
               </Col>
             ))}
           </Row>
@@ -124,7 +127,7 @@ export default function CaseStudiesPage() {
               <Paragraph className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-6 md:mb-8 text-white/90">
                 We&apos;re constantly adding new case studies. Let us know which company&apos;s frontend architecture you&apos;d like to learn about next.
               </Paragraph>
-              <Link href="/forum">
+              {/* <Link href="/case-studies/forum"> */}
                 <Button 
                   type="primary" 
                   size="large" 
@@ -132,7 +135,7 @@ export default function CaseStudiesPage() {
                 >
                   Request a Case Study
                 </Button>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         </div>
